@@ -11,7 +11,57 @@ div[data-testid="stTextArea"] textarea::placeholder {
   color: #d6d1c5 !important;
   opacity: 1 !important;
 }
-div[data-testid="stTextArea"] textarea:focus {
-  border-color: #f1cc63 !important;
-  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.22) !important;
+@media (max-width: 768px) {
+  html, body, [data-testid="stApp"], .stApp {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  [data-testid="stAppViewContainer"],
+  [data-testid="stMain"],
+  [data-testid="stMainBlockContainer"],
+  .block-container {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  [data-testid="stMainBlockContainer"], .block-container {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+  }
+  [data-testid="stSidebar"] {
+    width: min(85vw, 320px) !important;
+    max-width: 85vw !important;
+    min-width: 0 !important;
+  }
+  [data-testid="stSidebar"][aria-expanded="false"] {
+    transform: translateX(-110%) !important;
+    pointer-events: none !important;
+  }
+  [data-testid="stSidebar"] * {
+    overflow-wrap: anywhere;
+  }
+  h1, h2, h3, p, label {
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: clamp(1.5rem, 6vw, 2.1rem) !important; line-height: 1.45 !important; }
+  h2 { font-size: clamp(1.25rem, 5vw, 1.75rem) !important; }
+  [data-testid="stHorizontalBlock"] { flex-wrap: wrap !important; }
+  [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+    min-width: min(100%, 220px) !important;
+    flex: 1 1 100% !important;
+  }
+  [data-testid="stTextArea"], [data-testid="stTextArea"] textarea,
+  [data-testid="stButton"], [data-testid="stButton"] button {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  [data-testid="stTabs"] [data-baseweb="tab-list"] {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+  }
+  [data-testid="stTabs"] [data-baseweb="tab"] {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
 }
