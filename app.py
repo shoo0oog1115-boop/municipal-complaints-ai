@@ -7,7 +7,8 @@ import streamlit as st
 from ml import clean_arabic_text, train_and_evaluate
 
 st.set_page_config(page_title="منصة المدينة الذكية | البلاغات البلدية", page_icon="🕌", layout="wide", initial_sidebar_state="expanded")
-
+css = (Path(__file__).parent / "style.css").read_text(encoding="utf-8")
+st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 # الصورة موجودة مسبقاً في جذر المستودع بالاسم التالي.
 image_path = Path(__file__).parent / "IMG_7568.jpg"
 if image_path.is_file():
