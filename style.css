@@ -34,10 +34,7 @@ div[data-testid="stTextArea"] textarea::placeholder {
     max-width: 85vw !important;
     min-width: 0 !important;
   }
-  [data-testid="stSidebar"][aria-expanded="false"] {
-    transform: translateX(-110%) !important;
-    pointer-events: none !important;
-  }
+ 
   [data-testid="stSidebar"] * {
     overflow-wrap: anywhere;
   }
