@@ -1,0 +1,17 @@
+/* Madinah dark and gold text-area styling */
+div[data-testid="stTextArea"] textarea,
+div[data-testid="stTextArea"] textarea:focus {
+  background-color: rgba(8, 35, 29, 0.88) !important;
+  color: #ffffff !important;
+  border: 1.5px solid #d4af37 !important;
+  border-radius: 12px !important;
+  caret-color: #d4af37 !important;
+}
+div[data-testid="stTextArea"] textarea::placeholder {
+  color: #d6d1c5 !important;
+  opacity: 1 !important;
+}
+div[data-testid="stTextArea"] textarea:focus {
+  border-color: #f1cc63 !important;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.22) !important;
+}
